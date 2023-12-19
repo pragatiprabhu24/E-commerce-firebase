@@ -67,7 +67,7 @@ export default function Footer() {
               </h1>
             </div>
           </Link>
-          <p className="flex gap-2 text-xl text-white font-bold sm:ml-6 sm:mt-0 mt-4">Made with by <img src="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png" className='w-5' /> Pragati Prabhu</p>
+          <p className="flex gap-2 text-sm text-white font-bold sm:ml-6 sm:mt-0 mt-4">Made with by <img src="https://www.freeiconspng.com/thumbs/heart-png/heart-png-15.png" className='w-5' /> Pragati Prabhu</p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a className="text-blue-500">
               <img src="https://www.freeiconspng.com/uploads/facebook-logo-3.png" className='w-5' />

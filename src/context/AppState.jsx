@@ -3,7 +3,8 @@ import AppContext from './AppContext';
 
 const AppState = (props) => {
     const [mode, setMode] = useState('light')
-
+    const [loading, setLoading] = useState(false)
+ 
     const toggleMode = () => {
         if (mode === 'light') {
             setMode('dark');
@@ -15,7 +16,7 @@ const AppState = (props) => {
         }
     }
     return (
-        <AppContext.Provider value={{ mode, toggleMode }}>
+        <AppContext.Provider value={{ mode, toggleMode, loading, setLoading }}>
             {props.children}
         </AppContext.Provider>
     );
