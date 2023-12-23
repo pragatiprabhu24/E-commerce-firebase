@@ -74,7 +74,7 @@ export default function ProductCart({ openCart, setOpenCart }) {
                                 <div className="ml-4 flex flex-1 flex-col">
                                   <div>
                                     <div className="flex justify-between text-base font-medium text-gray-900">
-                                      <h3 className="w-60">
+                                      <h3 className="w-40">
                                         <a href={product.href}>
                                           {product.title}
                                         </a>
@@ -123,14 +123,14 @@ export default function ProductCart({ openCart, setOpenCart }) {
                         <div className="mt-2 flex justify-center text-center text-sm text-gray-500">
                           <p>
                             or
-                            <button
-                              type="button"
-                              className="font-medium text-yellow-500 hover:text-yellow-300"
-                              onClick={() => setOpen(false)}
+                            <a
+                              href="/allproducts"
+                              className="ml-2 font-medium text-yellow-500 hover:text-yellow-300"
+                              
                             >
                               Continue Shopping
                               <span aria-hidden="true"> &rarr;</span>
-                            </button>
+                            </a>
                           </p>
                         </div>
                       </div>
