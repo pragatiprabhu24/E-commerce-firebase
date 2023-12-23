@@ -38,7 +38,8 @@ const Checkout = () => {
     console.log(addressInfo);
 
     var options = {
-      key: import.meta.env.VITE_RAZORPAY_KEY,
+      key: import.meta.env.VITE_key,
+      key_secret: import.meta.env.VITE_secret,
       amount: parseInt(grandTotal * 100),
       currency: "INR",
       order_receipt: "order_rcptid_" + name,

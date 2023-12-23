@@ -17,9 +17,6 @@ const Order = () => {
         <div class="mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
           <div class="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8">
             <div class="flex flex-col justify-start items-start dark:bg-gray-800 bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
-              <p class="text-lg md:text-xl dark:text-white font-semibold leading-6 xl:leading-5 text-gray-800">
-                Customer’s Cart
-              </p>
               {order
                 .filter((obj) => obj.userid == userid)
                 .map((order) =>
@@ -28,12 +25,12 @@ const Order = () => {
                       <div class="mt-4 md:mt-6 flex flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full">
                         <div class="pb-4 md:pb-8 w-full md:w-40">
                           <img
-                            class="w-full hidden md:block"
+                            class="w-60 hidden md:block"
                             src={item.imageUrl}
                             alt="dress"
                           />
                           <img
-                            class="w-full md:hidden"
+                            class="w-60 md:hidden"
                             src={item.imageUrl}
                             alt="dress"
                           />
@@ -56,8 +53,8 @@ const Order = () => {
                             <p class="text-base dark:text-white xl:text-lg leading-6">
                               ₹ {item.price}
                             </p>
-                            <p class="text-base dark:text-white xl:text-lg leading-6 text-gray-800">
-                              {item.date}
+                            <p class="text-base dark:text-white xl:text-lg leading-6 text-rose-500">
+                              Deliver soon
                             </p>
                           </div>
                         </div>
