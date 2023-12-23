@@ -1,39 +1,26 @@
-import React, { useContext } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import Layout from '../components/app/Layout'
-import HeroSection from '../components/home/HeroSection';
-import Filter from '../components/home/Filter';
-import ProductCard from '../components/home/ProductCard';
-import Track from '../components/home/Track';
-import Testimonial from '../components/home/Testmonial';
-import { addToCart, removeFromCart } from '../redux/slice/cartSlice';
+import React, { useContext } from "react";
+import Layout from "../components/app/Layout";
+import HeroSection from "../components/home/HeroSection";
+import Filter from "../components/home/Filter";
+import ProductCard from "../components/home/ProductCard";
+import Track from "../components/home/Track";
+import Testimonial from "../components/home/Testmonial";
 
 const Home = () => {
-    const dispatch = useDispatch();
-    const { cart } = useSelector(state => state.cart);
+  return (
+    <Layout>
+      <HeroSection />
+      <div class="container">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mt-10 px-5 text-gray-900">
+          Our Latest Collection
+        </h1>
+        <div class="h-1 w-20 px-5 bg-yellow-400 rounded"></div>
+      </div>
+      <ProductCard count={4} />
+      <Track />
+      <Testimonial />
+    </Layout>
+  );
+};
 
-    console.log(cart)
-
-    const addToCartHandler = () => {
-        dispatch(addToCart('shirt'))
-    }
-
-    const removeFromCartHandler = () => {
-        dispatch(removeFromCart('shirt'))
-    }
-
-
-
-    return (
-        <Layout>
-           
-            <HeroSection />
-            <Filter />
-            <ProductCard />
-            <Track />
-            <Testimonial />
-        </Layout>
-    )
-}
-
-export default Home
+export default Home;

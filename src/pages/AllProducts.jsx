@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import ProductCard from "../components/home/ProductCard";
+import Layout from "../components/app/Layout";
+import Filter from "../components/home/Filter";
 
 const AllProducts = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Layout>
+      <Filter />
+      <ProductCard />
+    </Layout>
+  );
+};
 
-export default AllProducts
+export default AllProducts;

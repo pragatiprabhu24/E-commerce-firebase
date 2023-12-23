@@ -8,12 +8,11 @@ const firebaseConfig = {
   projectId: "ecommerce-site-2a58f",
   storageBucket: "ecommerce-site-2a58f.appspot.com",
   messagingSenderId: "236377096001",
-  appId: "1:236377096001:web:d9f643ebfad3eebbed6bc0"
+  appId: "1:236377096001:web:d9f643ebfad3eebbed6bc0",
 };
-
 
 const app = initializeApp(firebaseConfig);
 
 const fireDB = getFirestore(app);
-const auth = getAuth(app)
-export {fireDB,auth } ;
+const auth = getAuth(app);
+export { fireDB, auth };
